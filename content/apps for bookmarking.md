@@ -1,0 +1,9 @@
+-  Chromium
+-  elcurator
+-  Firefox
+-  Instapaper
+-  Pinboard
+-  Pocket
+-  Readability
+-  wallabag v1
+-  wallabag v2
