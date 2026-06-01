@@ -1,16 +1,7 @@
 ---
-title: "mendel5/alternative-front-ends: Overview of alternative open source front-ends for popular internet platforms (e.g. YouTube, Twitter, etc.)"
-source: "https://github.com/mendel5/alternative-front-ends?tab=readme-ov-file#imdb"
-author:
-  - "[[HookedBehemoth]]"
-created: 2026-01-13
-description:
-  - "Overview of alternative open source front-ends for popular internet platforms (e.g. YouTube"
-  - "Twitter"
-  - "etc.) - mendel5/alternative-front-ends"
 tags:
-  - "clippings"
-  - "copy"
+  - clippings
+  - copy
 ---
 ### Other services- [Pastewin](https://github.com/beucismis/pastewin): Free alternative Pastebin front-end
 - [MediathekViewWeb](https://github.com/mediathekview/mediathekviewweb): Video content of German public-service television broadcasters (e.g. ARD, ZDF)

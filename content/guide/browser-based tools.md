@@ -1,3 +1,6 @@
+---
+{}
+---
 ### TL;DR
 * The **[awesome_data_tools.md](file-tag: code-generated-file-e4cc0a1b-f515-45a5-83fc-e765df5b2e43)** file has been significantly expanded with dozens of additional browser-based tools.
 * Added categories for specialized data visualization, conversion utilities, and more robust workspace options.

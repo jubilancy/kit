@@ -1,3 +1,6 @@
+---
+{}
+---
 # Awesome Indie & Research Data Tools
 
 A curated list of free, browser-based tools for data management, workspace persistence, and creative projects.

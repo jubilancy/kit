@@ -1,9 +1,6 @@
 ---
-source: "https://fly.io/javascript-journal/soar-file-sharing/"
-created: 2026-03-23
 tags:
-  - "new-clippings"
-kind: "obsidian-clipper"
+  - new-clippings
 ---
 Title: Build a file sharing service without making your brain hurt
 

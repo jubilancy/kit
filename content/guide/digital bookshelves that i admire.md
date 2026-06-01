@@ -1,9 +1,6 @@
 ---
-source: "https://tomcritchlow.com/wiki/books/bookshelves/"
-created: 2026-03-22
 tags:
-  - "new-clippings"
-kind: "obsidian-clipper"
+  - new-clippings
 ---
 https://daverupert.com/bookshelf/
 http://aworkinglibrary.com/

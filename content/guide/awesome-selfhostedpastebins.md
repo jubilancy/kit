@@ -1,11 +1,6 @@
 ---
-title: "awesome-selfhosted/awesome-selfhosted: A list of Free Software network services and web applications which can be hosted on your own servers"
-source: "https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins"
-created: 2026-02-19
-description:
-  - "A list of Free Software network services and web applications which can be hosted on your own servers - awesome-selfhosted/awesome-selfhosted"
 tags:
-  - "new-clippings"
+  - new-clippings
 ---
 ### Pastebins**[`^        back to top        ^`](https://github.com/awesome-selfhosted/#awesome-selfhosted)**
 

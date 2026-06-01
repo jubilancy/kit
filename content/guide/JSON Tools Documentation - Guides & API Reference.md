@@ -1,3 +1,6 @@
+---
+{}
+---
 Title: JSON Tools Documentation | Guides & API Reference
 
 URL Source: https://jsontoolhub.com/docs

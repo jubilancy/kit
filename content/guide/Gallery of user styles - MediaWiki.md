@@ -1,8 +1,4 @@
 ---
-title: Manual:Gallery of user styles
-source: https://www.mediawiki.org/wiki/Manual:Gallery_of_user_styles
-created: 2026-02-06
-description:
 tags:
   - new-clippings
   - wiki

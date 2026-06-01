@@ -1,13 +1,6 @@
 ---
-title: "CSS snippets"
-source: "https://help.obsidian.md/snippets"
-author:
-  - "[[Obsidian Help]]"
-published:
-created: 2025-12-27
-description: "Community plugins - Obsidian Help"
 tags:
-  - "clippings"
+  - clippings
 ---
 Learn how to modify aspects of the Obsidian application's appearance without needing to [build a theme](https://docs.obsidian.md/Themes/App+themes/Build+a+theme).
 

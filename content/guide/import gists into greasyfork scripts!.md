@@ -1,10 +1,6 @@
 ---
-source: https://greasyfork.org/en/import
-created: 2026-03-15
 tags:
   - new-clippings
-kind: obsidian-clipper
-favorite: yes
 ---
 Favorites by [etmr](/en/users/1580520-etmr) [Edit](/en/users/1580520-etmr/sets/594343/edit)
 

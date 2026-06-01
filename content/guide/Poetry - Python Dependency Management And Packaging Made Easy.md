@@ -1,12 +1,6 @@
 ---
-title: "Introduction | Documentation | Poetry - Python dependency management and packaging made easy"
-source: "https://python-poetry.org/docs/#installing-with-pipx"
-author:
-published:
-created: 2025-12-29
-description: "IntroductionPoetry is a tool for dependency management and packaging in Python.It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.Poetry offers a lockfile to ensure repeatable installs, and can build your project for distribution.System requirementsPoetry requires Python 3.9+. It is multi-platform and the goal is to make it work equally wellon Linux, macOS and Windows."
 tags:
-  - "clippings"
+  - clippings
 ---
 - [System requirements](https://python-poetry.org/docs/#system-requirements)
 - [Installation](https://python-poetry.org/docs/#installation)

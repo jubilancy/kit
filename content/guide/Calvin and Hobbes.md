@@ -1,9 +1,6 @@
 ---
-source: "https://pub-9d638c0362e64d16bb75f4850f89ee2b.r2.dev/IMG_0436.jpeg"
-created: 2026-03-05
 tags:
-  - "new-clippings"
-kind: "obsidian-clipper"
+  - new-clippings
 ---
 ![https://pub-9d638c0362e64d16bb75f4850f89ee2b.r2.dev/IMG_0436.jpeg](https://pub-9d638c0362e64d16bb75f4850f89ee2b.r2.dev/IMG_0436.jpeg)
 
