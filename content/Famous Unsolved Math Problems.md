@@ -1,6 +1,0 @@
-# [Famous Unsolved Math Problems](https://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics)
-- [Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture)
-- [P vs NP](https://en.wikipedia.org/wiki/P_versus_NP_problem)
-- [Riemann Hypothesis](https://en.wikipedia.org/wiki/Riemann_hypothesis)
-- [Goldbach's Conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture)
-- [Navier-Stokes existence and smoothness](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_existence_and_smoothness)
