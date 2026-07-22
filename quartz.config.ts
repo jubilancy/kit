@@ -18,7 +18,7 @@ const config: QuartzConfig = {
         websiteId: '163553f5-45c0-4291-8423-20bdf8cd73d0'
     },
     locale: "en-US",
-    baseUrl: "jubilancy.github.io",
+    baseUrl: "jubilancy.github.io/kit",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
