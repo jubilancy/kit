@@ -1,0 +1,45 @@
+---
+title: Plugins
+---
+
+# Plugins
+
+Document installed plugins, why I use them, important settings, and any setup quirks.
+
+- [templater-obsidian](obsidian://show-plugin?id=templater-obsidian)
+- [obsidian-local-images-plus](obsidian://show-plugin?id=obsidian-local-images-plus)
+- [advanced-merger](obsidian://show-plugin?id=advanced-merger)
+- [auto-embed](obsidian://show-plugin?id=auto-embed)
+- [bulk-exporter](obsidian://show-plugin?id=bulk-exporter)
+- [buttons](obsidian://show-plugin?id=buttons)
+- [cmdr](obsidian://show-plugin?id=cmdr)
+- [code-emitter](obsidian://show-plugin?id=code-emitter)
+- [color-folders-files](obsidian://show-plugin?id=color-folders-files)
+- [colorful-note-borders](obsidian://show-plugin?id=colorful-note-borders)
+- [dataview](obsidian://show-plugin?id=dataview)
+- [dynamic-outline](obsidian://show-plugin?id=dynamic-outline)
+- [floating-toc](obsidian://show-plugin?id=floating-toc)
+- [gistr](obsidian://show-plugin?id=gistr)
+- [highlightr-plugin](obsidian://show-plugin?id=highlightr-plugin)
+- [iconic](obsidian://show-plugin?id=iconic)
+- [js-engine](obsidian://show-plugin?id=js-engine)
+- [media-extended](obsidian://show-plugin?id=media-extended)
+- [merge-notes](obsidian://show-plugin?id=merge-notes)
+- [metadata-menu](obsidian://show-plugin?id=metadata-menu)
+- [multi-properties](obsidian://show-plugin?id=multi-properties)
+- [multi-tag](obsidian://show-plugin?id=multi-tag)
+- [obsidian-auto-link-title](obsidian://show-plugin?id=obsidian-auto-link-title)
+- [obsidian-file-color](obsidian://show-plugin?id=obsidian-file-color)
+- [obsidian-icon-folder](obsidian://show-plugin?id=obsidian-icon-folder)
+- [obsidian-importer](obsidian://show-plugin?id=obsidian-importer)
+- [obsidian-link-embed](obsidian://show-plugin?id=obsidian-link-embed)
+- [obsidian-media-db-plugin](obsidian://show-plugin?id=obsidian-media-db-plugin)
+- [obsidian-regex-replace](obsidian://show-plugin?id=obsidian-regex-replace)
+- [obsidian-style-settings](obsidian://show-plugin?id=obsidian-style-settings)
+- [obsidian-wakatime](obsidian://show-plugin?id=obsidian-wakatime)
+- [open-gate](obsidian://show-plugin?id=open-gate)
+- [oz-image-plugin](obsidian://show-plugin?id=oz-image-plugin)
+- [shiki-highlighter](obsidian://show-plugin?id=shiki-highlighter)
+- [style-importer](obsidian://show-plugin?id=style-importer)
+- [tag-wrangler](obsidian://show-plugin?id=tag-wrangler)
+- [x-bookmarks-sync](obsidian://show-plugin?id=x-bookmarks-sync)

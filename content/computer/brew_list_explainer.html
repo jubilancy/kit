@@ -1,0 +1,227 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+.container { padding: 1rem 0; }
+.search-wrap { margin-bottom: 1.25rem; position: relative; }
+.search-wrap i { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--color-text-secondary); font-size: 16px; pointer-events: none; }
+#search { width: 100%; padding: 8px 12px 8px 34px; }
+.tabs { display: flex; gap: 6px; margin-bottom: 1rem; flex-wrap: wrap; }
+.tab { padding: 5px 14px; font-size: 13px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); cursor: pointer; background: transparent; color: var(--color-text-secondary); }
+.tab.active { background: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-primary); }
+.count { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 0.75rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px; }
+.item { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 10px 14px; display: flex; align-items: flex-start; gap: 10px; }
+.item:hover { border-color: var(--color-border-secondary); }
+.icon { font-size: 16px; color: var(--color-text-secondary); margin-top: 2px; flex-shrink: 0; }
+.name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); font-family: var(--font-mono); margin-bottom: 2px; }
+.desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+.tag { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: var(--border-radius-md); margin-top: 4px; }
+.tag-media { background: var(--color-background-info); color: var(--color-text-info); }
+.tag-cli { background: var(--color-background-success); color: var(--color-text-success); }
+.tag-lib { background: var(--color-background-secondary); color: var(--color-text-secondary); }
+.tag-lang { background: var(--color-background-warning); color: var(--color-text-warning); }
+.tag-cask { background: #EEEDFE; color: #3C3489; }
+.hidden { display: none; }
+</style>
+
+<div class="container">
+  <h2 class="sr-only">Homebrew package list with descriptions</h2>
+  <div class="search-wrap">
+    <i class="ti ti-search" aria-hidden="true"></i>
+    <input type="text" id="search" placeholder="Filter packages…" oninput="filter()" />
+  </div>
+  <div class="tabs">
+    <button class="tab active" onclick="setTab('all',this)">All</button>
+    <button class="tab" onclick="setTab('cli',this)">CLI tools</button>
+    <button class="tab" onclick="setTab('media',this)">Media</button>
+    <button class="tab" onclick="setTab('lib',this)">Libraries</button>
+    <button class="tab" onclick="setTab('lang',this)">Languages</button>
+    <button class="tab" onclick="setTab('cask',this)">Casks</button>
+  </div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<script>
+const packages = [
+  {name:"ada-url",desc:"Fast WHATWG-compliant URL parser in C++",icon:"ti-link",cat:"lib"},
+  {name:"aha",desc:"Converts ANSI color codes to HTML",icon:"ti-palette",cat:"cli"},
+  {name:"aom",desc:"AV1 video codec reference library",icon:"ti-video",cat:"lib"},
+  {name:"bash",desc:"Modern version of the Bash shell (newer than macOS built-in)",icon:"ti-terminal-2",cat:"lang"},
+  {name:"brotli",desc:"Google's fast lossless compression algorithm",icon:"ti-zip",cat:"lib"},
+  {name:"btop",desc:"Beautiful interactive resource monitor (CPU, RAM, network)",icon:"ti-activity",cat:"cli"},
+  {name:"c-ares",desc:"Async DNS resolution library",icon:"ti-world",cat:"lib"},
+  {name:"ca-certificates",desc:"Trusted root SSL certificate bundle",icon:"ti-certificate",cat:"lib"},
+  {name:"cairo",desc:"2D vector graphics library used by many apps",icon:"ti-vector",cat:"lib"},
+  {name:"certifi",desc:"Python package providing Mozilla CA certificates",icon:"ti-lock",cat:"lib"},
+  {name:"chromaprint",desc:"Audio fingerprinting library (used by MusicBrainz)",icon:"ti-music",cat:"lib"},
+  {name:"dav1d",desc:"Fast AV1 video decoder by VideoLAN",icon:"ti-player-play",cat:"media"},
+  {name:"deno",desc:"Secure JavaScript/TypeScript runtime by the Node.js creator",icon:"ti-brand-javascript",cat:"lang"},
+  {name:"eza",desc:"Modern colorful replacement for `ls` with icons",icon:"ti-list",cat:"cli"},
+  {name:"fastfetch",desc:"Blazing-fast system info display (like neofetch)",icon:"ti-info-circle",cat:"cli"},
+  {name:"fd",desc:"Fast, user-friendly alternative to `find`",icon:"ti-folder-search",cat:"cli"},
+  {name:"ffmpeg",desc:"Swiss-army knife for converting, recording, and streaming video/audio",icon:"ti-movie",cat:"media"},
+  {name:"figlet",desc:"Generates large ASCII-art text banners",icon:"ti-typography",cat:"cli"},
+  {name:"flyctl",desc:"CLI to deploy and manage apps on Fly.io",icon:"ti-plane",cat:"cli"},
+  {name:"fmt",desc:"Fast, safe C++ string formatting library",icon:"ti-code",cat:"lib"},
+  {name:"fontconfig",desc:"Library for configuring and customizing font access",icon:"ti-letter-a",cat:"lib"},
+  {name:"fortune",desc:"Prints random witty quotes in the terminal",icon:"ti-quote",cat:"cli"},
+  {name:"freetype",desc:"Library for rendering fonts (used by almost every app)",icon:"ti-letter-t",cat:"lib"},
+  {name:"fribidi",desc:"Unicode bidirectional text algorithm (Arabic/Hebrew support)",icon:"ti-language",cat:"lib"},
+  {name:"fzf",desc:"Blazing-fast fuzzy file and command-history finder",icon:"ti-search",cat:"cli"},
+  {name:"gdk-pixbuf",desc:"Image loading library for GTK apps",icon:"ti-photo",cat:"lib"},
+  {name:"gemini-cli",desc:"Google Gemini AI assistant in the terminal",icon:"ti-robot",cat:"cli"},
+  {name:"gettext",desc:"GNU internationalization and localization library",icon:"ti-world",cat:"lib"},
+  {name:"gh",desc:"Official GitHub CLI — PRs, issues, repos from the terminal",icon:"ti-brand-github",cat:"cli"},
+  {name:"giflib",desc:"Library for reading/writing GIF images",icon:"ti-gif",cat:"lib"},
+  {name:"gifski",desc:"Highest-quality GIF encoder from video frames",icon:"ti-gif",cat:"media"},
+  {name:"glib",desc:"Core utility library used by GNOME and GTK apps",icon:"ti-package",cat:"lib"},
+  {name:"glow",desc:"Renders Markdown beautifully in the terminal",icon:"ti-markdown",cat:"cli"},
+  {name:"gmp",desc:"GNU multiple-precision arithmetic library",icon:"ti-calculator",cat:"lib"},
+  {name:"graphite2",desc:"Font rendering for complex scripts (SIL Graphite)",icon:"ti-letter-case",cat:"lib"},
+  {name:"grip",desc:"Preview GitHub-flavored Markdown locally in a browser",icon:"ti-eye",cat:"cli"},
+  {name:"harfbuzz",desc:"Text shaping engine for complex scripts",icon:"ti-typography",cat:"lib"},
+  {name:"hdrhistogram_c",desc:"C library for high-dynamic-range latency histograms",icon:"ti-chart-histogram",cat:"lib"},
+  {name:"highway",desc:"Google's portable SIMD intrinsics library",icon:"ti-cpu",cat:"lib"},
+  {name:"hut",desc:"CLI for the sr.ht SourceHut forge platform",icon:"ti-brand-git",cat:"cli"},
+  {name:"icu4c",desc:"Unicode and globalization support library (ICU)",icon:"ti-globe",cat:"lib"},
+  {name:"imagemagick",desc:"Powerful CLI to convert, resize, and manipulate images",icon:"ti-photo-edit",cat:"media"},
+  {name:"imath",desc:"Numerical math library from the OpenEXR project",icon:"ti-math",cat:"lib"},
+  {name:"jpeg-turbo",desc:"High-speed JPEG encoder/decoder via SIMD",icon:"ti-photo",cat:"lib"},
+  {name:"jpeg-xl",desc:"Next-gen JPEG format with better compression and quality",icon:"ti-photo",cat:"lib"},
+  {name:"jq",desc:"Lightweight command-line JSON processor",icon:"ti-braces",cat:"cli"},
+  {name:"lame",desc:"High-quality MP3 encoder library",icon:"ti-music",cat:"media"},
+  {name:"leptonica",desc:"Image analysis and processing library (used by Tesseract)",icon:"ti-scan",cat:"lib"},
+  {name:"libarchive",desc:"Library for reading/writing tar, zip, and other archives",icon:"ti-file-zip",cat:"lib"},
+  {name:"libb2",desc:"BLAKE2 fast cryptographic hash library",icon:"ti-lock",cat:"lib"},
+  {name:"libdatrie",desc:"Double-array trie implementation (used by libthai)",icon:"ti-binary-tree",cat:"lib"},
+  {name:"libde265",desc:"Open H.265/HEVC video codec library",icon:"ti-video",cat:"lib"},
+  {name:"libdeflate",desc:"Very fast DEFLATE/zlib/gzip compression library",icon:"ti-zip",cat:"lib"},
+  {name:"libffi",desc:"Portable foreign function interface library",icon:"ti-code",cat:"lib"},
+  {name:"libgit2",desc:"C library for Git operations (used by tools that embed Git)",icon:"ti-git-branch",cat:"lib"},
+  {name:"libheif",desc:"Library for reading/writing HEIF/HEIC image files",icon:"ti-photo",cat:"lib"},
+  {name:"libidn2",desc:"Internationalized domain name library (IDNA 2008)",icon:"ti-world",cat:"lib"},
+  {name:"libnghttp2",desc:"HTTP/2 C library implementation",icon:"ti-network",cat:"lib"},
+  {name:"libnghttp3",desc:"HTTP/3 C library over QUIC",icon:"ti-network",cat:"lib"},
+  {name:"libngtcp2",desc:"QUIC transport protocol C library",icon:"ti-network",cat:"lib"},
+  {name:"libpng",desc:"Reference library for reading/writing PNG images",icon:"ti-photo",cat:"lib"},
+  {name:"librsvg",desc:"SVG rendering library used by GNOME apps",icon:"ti-vector",cat:"lib"},
+  {name:"libssh2",desc:"C library implementing the SSH2 protocol",icon:"ti-lock",cat:"lib"},
+  {name:"libthai",desc:"Thai language character handling library",icon:"ti-language",cat:"lib"},
+  {name:"libtiff",desc:"Library for reading/writing TIFF image files",icon:"ti-photo",cat:"lib"},
+  {name:"libtool",desc:"GNU generic library support script",icon:"ti-tool",cat:"lib"},
+  {name:"libunistring",desc:"Unicode string handling library for C",icon:"ti-abc",cat:"lib"},
+  {name:"libuv",desc:"Async I/O library powering Node.js",icon:"ti-bolt",cat:"lib"},
+  {name:"libvmaf",desc:"Netflix's video quality metric library",icon:"ti-video",cat:"lib"},
+  {name:"libvpx",desc:"Google's VP8/VP9 video codec library",icon:"ti-video",cat:"lib"},
+  {name:"libx11",desc:"Core X11 window system client library",icon:"ti-window",cat:"lib"},
+  {name:"libxau",desc:"X11 authorization protocol library",icon:"ti-lock",cat:"lib"},
+  {name:"libxcb",desc:"C binding for the X11 protocol",icon:"ti-window",cat:"lib"},
+  {name:"libxdmcp",desc:"X Display Manager Control Protocol library",icon:"ti-window",cat:"lib"},
+  {name:"libxext",desc:"X11 miscellaneous extensions library",icon:"ti-puzzle",cat:"lib"},
+  {name:"libxrender",desc:"X Render Extension client library",icon:"ti-paint",cat:"lib"},
+  {name:"little-cms2",desc:"Color management engine for ICC profile transforms",icon:"ti-palette",cat:"lib"},
+  {name:"llhttp",desc:"HTTP/1.x parser library (used by Node.js)",icon:"ti-network",cat:"lib"},
+  {name:"lolcat",desc:"Prints rainbow-colored text in the terminal",icon:"ti-rainbow",cat:"cli"},
+  {name:"lua",desc:"Lightweight embeddable scripting language",icon:"ti-code",cat:"lang"},
+  {name:"lz4",desc:"Extremely fast lossless compression algorithm",icon:"ti-zip",cat:"lib"},
+  {name:"lzo",desc:"Fast data compression library for real-time use",icon:"ti-zip",cat:"lib"},
+  {name:"m4",desc:"GNU macro processor (required by autoconf)",icon:"ti-brackets",cat:"lib"},
+  {name:"merve",desc:"Terminal-based merge tool for files",icon:"ti-git-merge",cat:"cli"},
+  {name:"micro",desc:"Modern, intuitive terminal text editor",icon:"ti-edit",cat:"cli"},
+  {name:"monolith",desc:"Saves a complete webpage as a single HTML file",icon:"ti-download",cat:"cli"},
+  {name:"mpdecimal",desc:"Arbitrary-precision decimal arithmetic library",icon:"ti-calculator",cat:"lib"},
+  {name:"nbytes",desc:"Human-friendly byte size formatting library",icon:"ti-file",cat:"lib"},
+  {name:"ncdu",desc:"Interactive disk usage analyzer in the terminal",icon:"ti-chart-pie",cat:"cli"},
+  {name:"ncurses",desc:"Library for building text-based terminal UIs",icon:"ti-terminal",cat:"lib"},
+  {name:"node",desc:"JavaScript runtime for server-side and tooling use",icon:"ti-brand-nodejs",cat:"lang"},
+  {name:"oniguruma",desc:"Flexible multi-charset regular expressions library",icon:"ti-regex",cat:"lib"},
+  {name:"openexr",desc:"High-dynamic-range image file format by ILM",icon:"ti-photo",cat:"lib"},
+  {name:"openjpeg",desc:"Open-source JPEG 2000 codec library",icon:"ti-photo",cat:"lib"},
+  {name:"openjph",desc:"High-throughput JPEG 2000 (HTJ2K) codec library",icon:"ti-photo",cat:"lib"},
+  {name:"openssl@3",desc:"Cryptography and SSL/TLS toolkit (v3)",icon:"ti-lock",cat:"lib"},
+  {name:"opus",desc:"Versatile open audio codec optimized for speech and music",icon:"ti-music",cat:"lib"},
+  {name:"pandoc",desc:"Universal document converter (Markdown → PDF, DOCX, etc.)",icon:"ti-file-export",cat:"cli"},
+  {name:"pango",desc:"Text layout and rendering library with Unicode support",icon:"ti-text-size",cat:"lib"},
+  {name:"pcre2",desc:"Perl-compatible regular expressions library (v2)",icon:"ti-regex",cat:"lib"},
+  {name:"pet",desc:"Command snippet manager with fuzzy search",icon:"ti-clipboard-list",cat:"cli"},
+  {name:"pipx",desc:"Install and run Python CLI tools in isolated environments",icon:"ti-package",cat:"cli"},
+  {name:"pixman",desc:"Low-level pixel manipulation library",icon:"ti-vector",cat:"lib"},
+  {name:"pnpm",desc:"Fast, disk-efficient Node.js package manager",icon:"ti-package",cat:"cli"},
+  {name:"pure",desc:"Minimal, fast zsh prompt",icon:"ti-terminal",cat:"cli"},
+  {name:"python@3.14",desc:"Latest Python interpreter",icon:"ti-brand-python",cat:"lang"},
+  {name:"readline",desc:"GNU library for command-line input with history/editing",icon:"ti-terminal",cat:"lib"},
+  {name:"repository-export-cli",desc:"CLI to export GitHub repository data",icon:"ti-database-export",cat:"cli"},
+  {name:"ripgrep",desc:"Blazing-fast recursive code search (better grep)",icon:"ti-search",cat:"cli"},
+  {name:"sdl2",desc:"Cross-platform multimedia library for games and apps",icon:"ti-device-gamepad",cat:"lib"},
+  {name:"simdjson",desc:"Parsing JSON faster using SIMD CPU instructions",icon:"ti-braces",cat:"lib"},
+  {name:"simdutf",desc:"Fast Unicode validation and transcoding via SIMD",icon:"ti-abc",cat:"lib"},
+  {name:"snipkit",desc:"Terminal snippet manager with shell integration",icon:"ti-clipboard",cat:"cli"},
+  {name:"sqlite",desc:"Self-contained, serverless SQL database engine",icon:"ti-database",cat:"lib"},
+  {name:"starship",desc:"Fast, customizable cross-shell prompt",icon:"ti-stars",cat:"cli"},
+  {name:"svt-av1",desc:"Intel's scalable AV1 encoder",icon:"ti-video",cat:"media"},
+  {name:"tesseract",desc:"Powerful open-source OCR engine",icon:"ti-scan",cat:"cli"},
+  {name:"tlrc",desc:"Simplified, community-driven man pages (tldr client in Rust)",icon:"ti-help",cat:"cli"},
+  {name:"tree",desc:"Displays directory structure as a visual tree",icon:"ti-binary-tree",cat:"cli"},
+  {name:"uv",desc:"Extremely fast Python package installer and resolver",icon:"ti-bolt",cat:"cli"},
+  {name:"uvwasi",desc:"WASI syscall library for WebAssembly sandboxing",icon:"ti-cube",cat:"lib"},
+  {name:"webp",desc:"Google's modern lossy/lossless image format library",icon:"ti-photo",cat:"lib"},
+  {name:"wget",desc:"Command-line tool to download files from the web",icon:"ti-download",cat:"cli"},
+  {name:"x264",desc:"H.264/AVC video encoder library",icon:"ti-video",cat:"media"},
+  {name:"x265",desc:"H.265/HEVC video encoder library",icon:"ti-video",cat:"media"},
+  {name:"xorgproto",desc:"X.Org protocol headers",icon:"ti-window",cat:"lib"},
+  {name:"xz",desc:"High-ratio LZMA2 data compression utility",icon:"ti-zip",cat:"cli"},
+  {name:"yt-dlp",desc:"Download videos from YouTube and 1000+ other sites",icon:"ti-brand-youtube",cat:"cli"},
+  {name:"yyjson",desc:"Fastest C JSON library with read/write support",icon:"ti-braces",cat:"lib"},
+  {name:"zoxide",desc:"Smarter `cd` that learns your most-used directories",icon:"ti-folder",cat:"cli"},
+  {name:"zsh-async",desc:"Run async jobs in zsh without subshells",icon:"ti-terminal",cat:"lib"},
+  {name:"zstd",desc:"Real-time compression algorithm by Facebook (fast + high ratio)",icon:"ti-zip",cat:"lib"},
+  {name:"basictex",desc:"Minimal MacTeX distribution for LaTeX typesetting",icon:"ti-file-text",cat:"cask"},
+  {name:"copyq",desc:"Advanced clipboard manager with history and scripting",icon:"ti-clipboard",cat:"cask"},
+  {name:"font-symbols-only-nerd-font",desc:"Nerd Font icon glyphs only — for patching other fonts",icon:"ti-icons",cat:"cask"},
+  {name:"ghostty",desc:"Fast, native GPU-accelerated terminal emulator",icon:"ti-terminal",cat:"cask"},
+  {name:"maccy",desc:"Lightweight macOS clipboard history manager",icon:"ti-clipboard-list",cat:"cask"},
+  {name:"qlmarkdown",desc:"macOS Quick Look plugin to preview Markdown files",icon:"ti-markdown",cat:"cask"},
+  {name:"searchlink",desc:"BBEdit/text editor plugin for quick web searching",icon:"ti-search",cat:"cask"},
+];
+
+const tagLabel = {cli:"CLI",media:"Media",lib:"Library",lang:"Language",cask:"App"};
+const tagClass = {cli:"tag-cli",media:"tag-media",lib:"tag-lib",lang:"tag-lang",cask:"tag-cask"};
+
+let currentTab = "all";
+
+function render(list) {
+  const grid = document.getElementById("grid");
+  const count = document.getElementById("count");
+  count.textContent = list.length + " package" + (list.length !== 1 ? "s" : "");
+  grid.innerHTML = list.map(p => `
+    <div class="item">
+      <i class="ti ${p.icon} icon" aria-hidden="true"></i>
+      <div>
+        <div class="name">${p.name}</div>
+        <div class="desc">${p.desc}</div>
+        <span class="tag ${tagClass[p.cat]}">${tagLabel[p.cat]}</span>
+      </div>
+    </div>
+  `).join("");
+}
+
+function filter() {
+  const q = document.getElementById("search").value.toLowerCase();
+  const list = packages.filter(p =>
+    (currentTab === "all" || p.cat === currentTab) &&
+    (p.name.includes(q) || p.desc.toLowerCase().includes(q))
+  );
+  render(list);
+}
+
+function setTab(tab, el) {
+  currentTab = tab;
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  el.classList.add("active");
+  filter();
+}
+
+render(packages);
+</script>
