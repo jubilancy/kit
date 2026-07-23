@@ -1,8 +1,8 @@
 ---
-title: folder1
+title: Setup
 ---
 
-# folder1
+# Setup
 
 Fresh-machine setup checklists, installation order, and post-install tasks.
 
