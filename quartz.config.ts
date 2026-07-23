@@ -1,6 +1,5 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
-
 /**
  * Quartz 4 Configuration
  *
@@ -28,30 +27,6 @@ const config: QuartzConfig = {
         header: "Victor Mono",
         body: "Victor Mono",
         code: "Victor Mono",
-      },
-      colors: {
-        lightMode: {
-          light: "#f4d58d",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#00420e",
-          dark: "#2b2b2b",
-          secondary: "#9dc4b4",
-          tertiary: "#deff49d3",
-          highlight: "rgb(251, 255, 0)",
-          textHighlight: "#fff23688",
-        },
-        darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
-        },
       },
     },
   },
@@ -93,5 +68,4 @@ const config: QuartzConfig = {
 ],
   },
 }
-
 export default config
