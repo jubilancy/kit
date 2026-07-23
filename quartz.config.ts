@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "the commonplace notebook for eliana",
+    pageTitle: "╰─ - ̗̀♡ kit",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -26,12 +26,12 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Victor Mono",
-        body: "Quicksand",
-        code: "Cascadia Code",
+        body: "Victor Mono",
+        code: "Victor Mono",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
+          light: "#f4d58d",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
           darkgray: "#00420e",
