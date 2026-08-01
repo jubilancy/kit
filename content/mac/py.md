@@ -6,6 +6,7 @@ title: python libraries
 
 Use this page for a repeatable checklist for setting up a new machine from scratch.
 
+```txt
 urllib3
 __pycache__
 _virtualenv.pth
@@ -32,3 +33,4 @@ requests-2.33.1.dist-info
 tqdm
 tqdm-4.67.3.dist-info
 urllib3-2.6.3.dist-info
+```

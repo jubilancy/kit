@@ -15,9 +15,9 @@ This site is my public documentation for my computer setup, Obsidian configurati
 
 
 
-- [brew](./brew) 
-- [computer](./computer) 
-- [llm](./llm) 
-- [obsidian](./obsidian) 
-- [setup](./setup) 
+- [brew](./brew)
+- [computer](./computer)
+- [llm](./llm)
+- [obsidian](./obsidian)
+- [setup](./setup)
 - [template](./template)
