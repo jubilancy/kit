@@ -1,16 +1,18 @@
 ---
 title: "Embed web pages"
+tags:
+  - "clippings"
+  - "copy"
+---
+
+```md
 source: "https://help.obsidian.md/embed-web-pages#Embed%20a%20tweet"
 author:
   - "[[Obsidian Help]]"
 created: 2026-01-14
 description:
   - "Embed web pages - Obsidian Help"
-tags:
-  - "clippings"
-  - "copy"
----
-[Obsidian Help](https://help.obsidian.md/Home)
+```
 
 [Obsidian Help](https://help.obsidian.md/Home)
 
