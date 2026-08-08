@@ -1,0 +1,91 @@
+---
+title: Dev Configs & Dotfiles Kit
+tags:
+  - dev
+  - tools
+  - workflow
+description: Curated repos, extensions, and settings snippets to build your ideal dev setup
+---
+
+# Dev Configs & Dotfiles Kit
+
+Finding your workflow setup means borrowing from people who've already solved the hard parts. Here's where to steal (the good kind).
+
+---
+
+## The Essentials
+
+Three repos that cover everything:
+
+- [Awesome VS Code Settings](https://github.com/palashmon/awesome-vscode-settings) — `settings.json` snippets for a frictionless editor
+- [Dotfiles Meta-Index](https://dotfiles.github.io/) — How real developers structure their configs
+- [Awesome VS Code](https://github.com/viatsko/awesome-vscode) — Themes, extensions, tools (the full directory)
+
+---
+
+## Repos to Reference
+
+### [Awesome VS Code Settings](https://github.com/palashmon/awesome-vscode-settings)
+
+**What**: Curated `settings.json` snippets that actually matter.
+
+**Find here**: Smooth cursor animations, visual clutter hiding, optimized search exclusions, and the tiny tweaks that make your editor feel intentional.
+
+### [Mathias's Dotfiles](https://github.com/mathiasbynens/dotfiles)
+
+**What**: The canonical reference for dotfiles.
+
+**Find here**: [Bash](https://www.gnu.org/software/bash/), [Git](https://git-scm.com/), and sensible OS defaults. Half the internet forks this as their baseline.
+
+### [Webpro's Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles)
+
+**What**: A meta-list of dotfile repos, organized by OS and shell.
+
+**Find here**: Configs filtered by [Zsh](https://www.zsh.org/), [Fish](https://fishshell.com/), and more. Good for finding a template that matches your actual workflow.
+
+---
+
+## Extensions Worth Installing
+
+| Name | What It Does |
+|------|--------------|
+| [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) | Inline error/warning highlights. No hovering. |
+| [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) | Beautiful interactive branch tree. |
+| [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) | Aggregates all `TODO` and `FIXME` comments into a sidebar. |
+| [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) | Autocompletes file paths as you type. |
+| [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) | Class completion for [Tailwind](https://tailwindcss.com/). |
+
+---
+
+## Settings to Copy
+
+Paste these into your `settings.json` for a more polished feel:
+
+```json
+{
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "expand",
+  "editor.linkedEditing": true,
+  "explorer.compactFolders": false,
+  "workbench.list.smoothScrolling": true,
+  "editor.bracketPairColorization.enabled": true
+}
+```
+
+Each one removes friction:
+- Smooth cursor motion feels better
+- Linked editing speeds up tag/variable renaming
+- Expanded folders make your tree readable
+- Smooth scrolling is less jarring
+- Bracket colors help you track nesting
+
+---
+
+## How to Use This
+
+1. Pick a dotfiles repo that matches your OS/shell
+2. Copy what actually matters (don't cargo-cult everything)
+3. Add extensions as you hit workflow pain points
+4. Tweak `settings.json` until it feels *right*
+
+The best config is one you understand and use, not one you inherited.
