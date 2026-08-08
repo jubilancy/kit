@@ -1,6 +1,5 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
-
 /**
  * Quartz 4 Configuration
  *
@@ -14,8 +13,8 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: {
       provider: 'umami',
-      host: 'https://cloud.umami.is',
-      websiteId: '163553f5-45c0-4291-8423-20bdf8cd73d0'
+        host: 'https://cloud.umami.is',
+        websiteId: '163553f5-45c0-4291-8423-20bdf8cd73d0'
     },
     locale: "en-US",
     baseUrl: "jubilancy.github.io/kit",
@@ -76,27 +75,21 @@ const config: QuartzConfig = {
       Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [Plugin.RemoveDrafts()],
-    emitters: [
-      Plugin.AliasRedirects(),
-      Plugin.ComponentResources(),
-      Plugin.ContentPage(),
-      Plugin.FolderPage(),
-      Plugin.TagPage(),
-      Plugin.NoteProperties({
-        includeAll: false,
-        includedProperties: ["description", "tags"],
-        excludedProperties: [],
-      }),
-      Plugin.ContentIndex({
-        enableSiteMap: true,
-        enableRSS: true,
-      }),
-      Plugin.Assets(),
-      Plugin.Static(),
-      Plugin.Favicon(),
-      Plugin.NotFoundPage(),
-    ],
+  emitters: [
+    Plugin.AliasRedirects(),
+    Plugin.ComponentResources(),
+    Plugin.ContentPage(),
+    Plugin.FolderPage(),
+    Plugin.TagPage(),
+    Plugin.ContentIndex({
+      enableSiteMap: true,
+      enableRSS: true,
+    }),
+    Plugin.Assets(),
+    Plugin.Static(),
+    Plugin.Favicon(),
+    Plugin.NotFoundPage(),
+],
   },
 }
-
 export default config
