@@ -1,5 +1,5 @@
 ---
-title: "Embed web pages"
+title: "embed web pages"
 tags:
   - "clippings"
   - "copy"
