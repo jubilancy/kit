@@ -1,17 +1,29 @@
 ---
-title: Prompt Engineering
+title: "Mastering LLM Prompting: A Developer's Playbook"
 source: https://www.simplifyingcomplexity.tech/how-to-prompt
 author:
   - "[[techspresso links]]"
 published:
 created: 2026-07-03
-description: "The #1 AI newsletter for busy professionals. Daily tutorials, trending news, and tools explained simply. Trusted by 50,000+ subscribers. Subscribe for free." 
+tags:
+- chatgpt-prompting
+- ai-prompting-techniques
+- language-model-optimization
+- zero-shot-learning
+- role-based-prompting
+description: "Learn how to craft effective prompts for LLMs like ChatGPT and Gemini, and discover techniques for zero-shot and role-based prompting to achieve better results" 
 ---
 
 ```yaml
 chatgpt promptingai prompting techniqueslanguage model optimizationzero-shot learningrole-based prompting
 tags:
   - clippings, llm, ai, prompting, chatgpt, gemini, language-models
+- Understanding How LLMs Work
+- The Importance of Structured Prompts
+- Zero-Shot Prompting Techniques
+- Role-Based Prompting for Better Results
+- Advanced Prompting Strategies for Developers
+
 ```
 
 ## **The Prompting Playbook I Keep Coming Back To**
