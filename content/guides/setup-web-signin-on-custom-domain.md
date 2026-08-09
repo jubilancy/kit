@@ -9,15 +9,17 @@ description: Learn how to set up web sign-in on your own domain with our compreh
 tags:
   - clippings
   - copy
-  - single sign-on
-  - web-development, single-sign-on, authentication, security, identity-management, custom-domain, signin-flow
-  - custom domain authentication
-  - web security
-  - identity management system
-  - signin flow optimization
-  - oauth implementation
-  - saml authentication
+  - single-sign-on
+  - web-development
+  - authentication
+  - security
+  - identity-management
+  - custom-domain
+  - signin-flow
+  - oauth-implementation
+  - saml-authentication
 ---
+
 How to setup [web sign-in](https://indieweb.org/web_sign-in "web sign-in") on your own domain.
 
 ## Setup Instructions
