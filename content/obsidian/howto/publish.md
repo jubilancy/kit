@@ -1,7 +1,7 @@
 ---
 title: Obsidian Publish Alternatives for Developers and Power Users
 description: Explore open-source Obsidian Publish alternatives for sharing notes, creating blogs, and generating static sites with GitHub repository integration and more features
-tags: obsidian, obsidian-publish, note-sharing, static-site-generation, github-repository, knowledge-base, markdown-notes, open-source, alternatives
+tags: static-site-generator, markdown-notes, knowledge-base-software, note-sharing, github-pages, open-source-alternatives, blog-creation-tools, hosted-url-services, obsidian, obsidian-publish, static-site-generation, github-repository, knowledge-base, open-source, alternatives
 ---
 
 **Share Note** publishes individual notes to a hosted URL. **JotBird** creates a blog from your vault. **Enveloppe** pushes notes to a GitHub repository for static site generation.
