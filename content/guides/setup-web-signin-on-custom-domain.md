@@ -1,8 +1,11 @@
 ---
-title: Setting Up Web Sign-In on Your Custom Domain: A Step-by-Step Guide
+title: "Setting Up Web Sign-In on Your Custom Domain: A Step-by-Step Guide"
 source: https://indieweb.org/How_to_set_up_web_sign-in_on_your_own_domain
+author:
+  - "[[IndieWeb]]"
+published:
 created: 2026-01-07
-description: Learn how to set up web sign-in on your own domain with our comprehensive guide, covering authentication, security, and identity management best practices.
+description: "Learn how to set up web sign-in on your own domain with our comprehensive guide, covering authentication, security, and identity management best practices."
 tags:
   - clippings
   - copy
