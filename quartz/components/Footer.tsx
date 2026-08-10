@@ -8,14 +8,25 @@ interface Options {
 }
 
 export default ((opts?: Options) => {
-  const Footer: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
+  const Footer: QuartzComponent = ({ displayClass, cfg, fileData }: QuartzComponentProps) => {
     const year = new Date().getFullYear()
     const links = opts?.links ?? []
+    
+    const filepath = fileData?.filepath
+    const rawUrl = filepath 
+      ? `https://raw.githubusercontent.com/jubilancy/kit/main/${filepath}`
+      : null
+
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
+          {rawUrl && (
+            <>
+              {" "} | <a href={rawUrl} download>Raw</a>
+            </>
+          )}
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
@@ -27,7 +38,6 @@ export default ((opts?: Options) => {
       </footer>
     )
   }
-
   Footer.css = style
   return Footer
 }) satisfies QuartzComponentConstructor
