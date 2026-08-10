@@ -2,7 +2,7 @@
 tags:
   - lists
   - cli
-  - "#cloudflare"
+  - cloudflare
 description:
   - Wrangler offers a number of commands to manage your Cloudflare Workers.
 ---
