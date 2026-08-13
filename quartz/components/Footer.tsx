@@ -8,28 +8,15 @@ interface Options {
 }
 
 export default ((opts?: Options) => {
-  const Footer: QuartzComponent = ({ displayClass, cfg, fileData }: QuartzComponentProps) => {
+  const Footer: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
     const year = new Date().getFullYear()
     const links = opts?.links ?? []
-    
-    const filepath = fileData?.filepath
-    const rawUrl = filepath 
-      ? `https://raw.githubusercontent.com/jubilancy/kit/v4/${encodeURIComponent(filepath)}`
-      : null
-    const filename = filepath ? filepath.split("/").pop() : undefined
 
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
-          {rawUrl ? (
-            <>
-              {" "} | <a href={rawUrl} download={filename} target="_blank" rel="noopener noreferrer">Raw</a>
-            </>
-          ) : (
-            <span style="color: red; font-size: 10px;"> [DEBUG: fileData undefined]</span>
-          )}
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
