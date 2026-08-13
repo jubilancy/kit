@@ -14,8 +14,9 @@ export default ((opts?: Options) => {
     
     const filepath = fileData?.filepath
     const rawUrl = filepath 
-      ? `https://raw.githubusercontent.com/jubilancy/kit/main/${filepath}`
+      ? `https://raw.githubusercontent.com/jubilancy/kit/main/${encodeURIComponent(filepath)}`
       : null
+    const filename = filepath ? filepath.split("/").pop() : undefined
 
     return (
       <footer class={`${displayClass ?? ""}`}>
@@ -24,7 +25,7 @@ export default ((opts?: Options) => {
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
           {rawUrl && (
             <>
-              {" "} | <a href={rawUrl} download>Raw</a>
+              {" "} | <a href={rawUrl} download={filename}>Raw</a>
             </>
           )}
         </p>
