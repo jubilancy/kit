@@ -4,3 +4,12 @@
 h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
+// Override theme fonts on sidebar and navigation UI
+.sidebar,
+.navbar,
+nav,
+.explorer,
+[class*="nav"],
+[class*="menu"] {
+  font-family: var(--bodyFont) !important;
+}
