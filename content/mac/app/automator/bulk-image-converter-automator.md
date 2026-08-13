@@ -383,7 +383,10 @@ Quartz allows raw HTML in markdown, so this button embeds the same plist as a st
 <button id="download-workflow-btn" style="padding: 0.5em 1em; cursor: pointer;">Download .workflow</button>
 
 <script>
-document.getElementById('download-workflow-btn').addEventListener('click', function() {
+function setupWorkflowDownloadButton() {
+  const btn = document.getElementById('download-workflow-btn');
+  if (!btn) return;
+
   const workflowXML = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -714,14 +717,22 @@ document.getElementById('download-workflow-btn').addEventListener('click', funct
 </plist>
 `;
 
-  const blob = new Blob([workflowXML], { type: 'application/xml' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'bulk-image-converter.workflow';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-});
+  btn.addEventListener('click', function() {
+    const blob = new Blob([workflowXML], { type: 'application/xml' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'bulk-image-converter.workflow';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+}
+
+// Quartz fires a custom "nav" event after initial load AND after every
+// SPA client-side navigation. Hooking here (instead of running the setup
+// code inline at parse time) means the listener gets attached whether the
+// user hard-loads this page or clicks into it from another Quartz page.
+document.addEventListener('nav', setupWorkflowDownloadButton);
 </script>
