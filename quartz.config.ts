@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import * as Component from "./quartz/components"
 
 /**
  * Quartz 4 Configuration
@@ -91,9 +92,6 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
     ],
-  },
-  layout: {
-    footer: "Footer",
   },
 }
 
