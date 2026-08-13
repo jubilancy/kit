@@ -1,6 +1,5 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
-import * as Component from "./quartz/components"
 
 /**
  * Quartz 4 Configuration
@@ -22,6 +21,27 @@ const config: QuartzConfig = {
     baseUrl: "jubilancy.github.io/kit",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
+    head: {
+      init: {
+        inline: `
+          document.addEventListener('DOMContentLoaded', () => {
+            const footer = document.querySelector('footer p');
+            if (footer) {
+              const path = window.location.pathname.replace('/kit/', '').replace(/\\/$/, '');
+              if (path && path !== '') {
+                const rawUrl = \`https://raw.githubusercontent.com/jubilancy/kit/v4/content/\${path}.md\`;
+                const link = document.createElement('a');
+                link.href = rawUrl;
+                link.download = true;
+                link.textContent = 'Raw';
+                footer.appendChild(document.createTextNode(' | '));
+                footer.appendChild(link);
+              }
+            }
+          });
+        `
+      }
+    },
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
