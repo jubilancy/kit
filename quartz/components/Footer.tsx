@@ -23,10 +23,12 @@ export default ((opts?: Options) => {
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
-          {rawUrl && (
+          {rawUrl ? (
             <>
-              {" "} | <a href={rawUrl} download={filename}>Raw</a>
+              {" "} | <a href={rawUrl} download={filename} target="_blank" rel="noopener noreferrer">Raw</a>
             </>
+          ) : (
+            <span style="color: red; font-size: 10px;"> [DEBUG: fileData undefined]</span>
           )}
         </p>
         <ul>
