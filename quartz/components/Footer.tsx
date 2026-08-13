@@ -14,7 +14,7 @@ export default ((opts?: Options) => {
     
     const filepath = fileData?.filepath
     const rawUrl = filepath 
-      ? `https://raw.githubusercontent.com/jubilancy/kit/main/${encodeURIComponent(filepath)}`
+      ? `https://raw.githubusercontent.com/jubilancy/kit/v4/${encodeURIComponent(filepath)}`
       : null
     const filename = filepath ? filepath.split("/").pop() : undefined
 
