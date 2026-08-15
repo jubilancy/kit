@@ -2,6 +2,33 @@
 
 Multi-line scripts, functions, and bookmarklets intended to be saved and executed as a unit.
 
+## Create an executable script via heredoc
+Creates a new executable script file in one command using a heredoc — everything between `<< 'EOF'` and `EOF` becomes the file content.
+```bash
+cat > ~/bin/myscript.zsh << 'EOF'
+#!/bin/zsh
+# your script here
+EOF
+chmod +x ~/bin/myscript.zsh
+```
+
+## Scan EPUBs for reader highlights/annotations
+Scans every EPUB in the current folder and flags any that contain reader highlights or annotations. More accurate than `unzip -l` since it parses the EPUB manifest properly.
+```bash
+for f in *.epub; do
+  epub-utils files "$f" 2>/dev/null | grep -qE "(mbp|annotations|highlights)" && echo "🎯 $f HAS READER NOTES"
+done
+```
+
+## Universal pipx install pattern
+The safe, modern Mac pattern for installing any Python CLI app without breaking your system Python.
+```bash
+# Install any Python CLI tool — use this every time instead of pip3
+brew install pipx       # only needed once ever
+pipx install TOOLNAME   # replace with any tool
+TOOLNAME --help         # verify it works
+```
+
 ## Save All Page Links to a Text File
 Collects every anchor `href` and image `src`/`srcset` on the page, then downloads them as a timestamped `.txt` file named after the site's domain.
 ```javascript
