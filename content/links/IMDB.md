@@ -1,0 +1,110 @@
+---
+title: IMDb
+source: "https://help.imdb.com/article/imdb/general-information/imdb-site-index/GNCX7BHNSPBTFALQ#so"
+created: 2026-03-18
+tags:
+  - imdb
+  - movie-database
+  - film-information
+  - tv-shows
+  - entertainment-platform
+  - cast-crew
+  - ratings-reviews
+  - streaming
+  - cinema
+  - television
+  - actor-profiles
+kind: "obsidian-clipper"
+---
+- If you are curious about the wide variety of features at IMDb, here is a good road map for finding your way around:
+- **[User Profile Page](https://www.imdb.com/profile?ref_=helpms_ih_gi_siteindex)** Visit your profile page, including your badges, ratings, watchlist plus other information about you as a user of IMDb
+- **[Advertising](https://www.imdb.com/advertising/?ref_=helpms_ih_gi_siteindex)** Get more information about advertising opportunities on IMDb
+- **[Android App](https://play.google.com/store/apps/details?id=com.imdb.mobile)** IMDb for Android phones and tablets, download for free
+- **[Awards Central](https://www.imdb.com/awards-central/?ref_=helpms_ih_gi_siteindex)** Awards Central - Nominees and Winners for Oscars, Golden Globes, Independent Spirit Awards, BAFTAs, Critics' Choice and Screen Actors Guild Awards
+- ---
+- **[Badges](https://www.imdb.com/badge/?ref_=helpms_ih_gi_siteindex)** Earn badges for your user [profile page](https://www.imdb.com/profile?ref_=helpms_ih_gi_siteindex)
+- **[Best of the year](https://www.imdb.com/best-of?ref_=helpms_ih_gi_siteindex)** See the top 10 stars, top movies, top TV, breakout stars and more
+- **[Birthdays](https://www.imdb.com/date/?ref_=helpms_ih_gi_siteindex)** Who was born on your birthday?
+- **[Bottom 100](https://www.imdb.com/chart/bottom?ref_=helpms_ih_gi_siteindex)** The 100 lowest rated movies according to our users
+- **[Box Office](https://www.imdb.com/chart/?ref_=helpms_ih_gi_siteindex)** Weekly winners at the box office
+- **[Box Office Mojo](https://www.boxofficemojo.com/?ref_=helpms_ih_gi_siteindex)** Our partner site, delivering detailed box office numbers from the US and international markets
+- ---
+- **[Calendar](https://www.imdb.com/calendar/?ref_=helpms_ih_gi_siteindex)** Release calendar for movies worldwide
+- **[Celebrity News](https://www.imdb.com/news/celebrity?ref_=helpms_ih_gi_siteindex)** Get the latest celebrity news
+- **[Cannes Film Festival](https://www.imdb.com/cannes/?ref_=helpms_ih_gi_siteindex)** Coverage of the Cannes Film Festival
+- **[Comic-Con](https://www.imdb.com/comic-con/?ref_=helpms_ih_gi_siteindex)** Complete coverage of the big events including panels, parties, and the big reveals
+- **[Contact Us](https://help.imdb.com/contact?ref_=helpms_ih_gi_siteindex)** Contact IMDb Customer Service
+- **[Contributor Zone](https://www.imdb.com/czone/?ref_=helpms_ih_gi_siteindex)** Useful tools for people contributing data
+- ---
+- [Developer](https://developer.imdb.com?ref_=helpms_ih_gi_developer) Find information for how to gain access to IMDb's metadata for every movie, TV series and video game title as well as performers and creators, along with full lifetime box office grosses from IMDbPro's Box Office Mojo.
+- ---
+- **[Emmy Awards](https://www.imdb.com/emmys/?ref_=helpms_ih_gi_siteindex)** Our coverage of the primetime Emmy nominations and award show
+- **[Events](https://www.imdb.com/event/all?ref_=helpms_ih_gi_siteindex)** A complete list of awards and events
+- ---
+- **[Facebook](https://www.facebook.com/imdb?ref_=helpms_ih_gi_siteindex)** IMDb's main Facebook page, used to share the major entertainment news stories, photos, trailers of the day
+- **[Fall TV](https://www.imdb.com/falltv/?ref_=helpms_ih_gi_siteindex)** New shows, trailers, galleries featuring all the latest for Fall TV
+- **[Family Entertainment Guide](https://www.imdb.com/family-entertainment-guide/?ref_=helpms_ih_gi_siteindex)** Looking for movies and TV shows the whole family can watch together? Check out IMDb's Family Entertainment Guide
+- **[Feedback](https://help.imdb.com/article/imdb/general-information/getsatisfaction-community-access-you-re-about-to-leave-imdb-com/GP4FF3REXES9AR3P/)** Send us feedback
+- **[Festival Central](https://www.imdb.com/festival-central/?ref_=helpms_ih_gi_siteindex)** Follow our coverage of the biggest film festivals of the year including Cannes, Tribeca, and TIFF with movie guides, editors' picks, photo galleries, exclusive video, and more
+- ---
+- **[Genres & Interests](https://www.imdb.com/feature/genre/?ref_=helpms_ih_gi_siteindex)** Love westerns? Comedies? Film noir? See the biggest and best collection of films sorted by their genre and subgenre
+- ---
+- **[Home](https://www.imdb.com/?ref_=helpms_ih_gi_siteindex)** IMDb home page
+- ---
+- **[IMDb Picks](https://www.imdb.com/imdbpicks/?ref_=helpms_ih_gi_siteindex)** Get top picks for movies and TV along with other content from our editors
+- **[IMDb What to Watch app](https://www.imdb.com/tv/?ref_=helpms_ih_gi_siteindex)** Discover the next great movie or TV series via quick, fun mini-games
+- **[IMDbPro](https://pro.imdb.com/?ref_=helpms_ih_gi_siteindex)** Our membership site aimed at entertainment industry professionals
+- **[India Spotlight](https://www.imdb.com/india?ref_=helpms_ih_gi_siteindex)** Discover top rated movies and TV shows popular on IMDb in India
+- **[iOS App](https://itunes.apple.com/app/imdb-movies-tv/id342792525?ref_=helpms_ih_gi_siteindex)** IMDb for iPhone/iPad/iPod, download for free
+- **[In Production](https://pro.imdb.com/inproduction/?ref_=helpms_ih_gi_siteindex)** News and info on upcoming films and shows at IMDbPro
+- **[Instagram](https://www.instagram.com/imdb/?ref_=helpms_ih_gi_siteindex)** Follow IMDb on Instagram
+- **[Interfaces](https://contribute.imdb.com/dataset?ref_=helpms_ih_gi_siteindex)** IMDb Datasets: Subsets of IMDb data for personal and non-commercial use
+- ---
+- **[Jobs at IMDb](https://www.amazon.jobs/en/teams/imdb?ref_=helpms_ih_gi_siteindex)** We love what we do and are looking for passionate, smart people to share our vision and make it a reality
+- ---
+- **[Keywords](https://www.imdb.com/search/keyword?ref_=helpms_ih_gi_siteindex)** Search for a keyword, pick from one of our example starting points, or browse all keywords
+- **[Kindle App](https://www.amazon.com/IMDb-Mobile-LLC-Movies-TV/dp/B004GISARW/?ref_=helpms_ih_gi_siteindex)** IMDb on your Kindle Fire, download for free
+- ---
+- **[Latest Posters](https://www.imdb.com/gallery/rg1624939264?ref_=helpms_ih_gi_siteindex)** A poster gallery curated by IMDb's editors
+- **[Login](https://secure.imdb.com/register-imdb/login?ref_=helpms_ih_gi_siteindex)** Registered IMDb users can login here
+- ---
+- **[News](https://www.imdb.com/news/top?ref_=helpms_ih_gi_siteindex)** Top news from the entertainment industry
+- ---
+- **[Oscars](https://www.imdb.com/event/ev0000003/?ref_=helpms_ih_gi_siteindex)** Nominees and winners from 1929-today (also, see our [Awards Central](https://www.imdb.com/awards-central/?ref_=helpms_ih_gi_siteindex) section)
+- ---
+- **[Podcasts](https://www.imdb.com/podcasts?ref_=helpms_ih_gi_siteindex)** Search through IMDb's most popular podcasts
+- **[Polls](https://www.imdb.com/poll?ref_=helpms_ih_gi_siteindex)** Vote in our movie, TV and celebrity polls
+- **[Popular Celebrities](https://www.imdb.com/search/name?gender=male,female)** IMDb's most popular celebrities
+- **[Popular Movies](https://www.imdb.com/chart/moviemeter)** IMDb's most popular movies
+- **[Popular TV](https://www.imdb.com/chart/tvmeter)** IMDb's most popular TV shows
+- **[Press Room](https://www.imdb.com/press?ref_=helpms_ih_gi_siteindex)** A place to find IMDb press releases, publicity team contact information, and more
+- **[Privacy Policy](https://www.imdb.com/privacy?ref_=helpms_ih_gi_siteindex)** Our privacy policy
+- **[Processing Times](https://contribute.imdb.com/times?ref_=helpms_ih_gi_siteindex)** Current processing times for newly submitted data, updated daily
+- ---
+- **[Ratings](https://www.imdb.com/list/ratings?ref_=helpms_ih_gi_siteindex)** Keep track of your ratings of which movies and TV shows you did and didn't like
+- **[Recommendations](/article/imdb/discover-watch/recommended-for-you-faqs/GPZ2RSPB3CPVL86Z?ref_=helpms_ih_gi_siteindex)** Get personalized recommendations of movies and shows to watch
+- **[Registration](https://secure.imdb.com/register-imdb/personalize?ref_=helpms_ih_gi_siteindex)** Register with the IMDb for additional services, privileges and personalization
+- ---
+- **[Scary Good](https://www.imdb.com/scary-good?ref_=helpms_ih_gi_siteindex)** Beware! Beyond this link is a terrifying destination of all things horror for those who like classic chills and modern day thrills
+- **[Scorecard](/article/contribution/new-features/imdb-scorecard/GR6ELNEMQZADBQ2B?ref_=helpms_ih_gi_siteindex)** For filmmakers and production companies to add trailers, videos and more to their titles
+- **[Search - Name](https://www.imdb.com/search/name?ref_=helpms_ih_gi_siteindex)** Compose advanced searches involving names
+- **[Search - Title](https://www.imdb.com/search/title?ref_=helpms_ih_gi_siteindex)** Compose advanced searches involving titles
+- **[Showtimes & Tickets](https://www.imdb.com/showtimes?ref_=helpms_ih_gi_siteindex)** Movie showtimes in several countries and online ticketing in the US
+- **[Statistics](https://www.imdb.com/pressroom/stats/?ref_=helpms_ih_gi_siteindex)** Statistical breakdown of IMDb data
+- **[Support](/article/imdb/general-information/you-re-about-to-leave-imdb-com/GP4FF3REXES9AR3P?ref_=helpms_ih_gi_siteindex)** Visit IMDb's support community at Sprinklr
+- **[Sundance Film Festival](https://www.imdb.com/sundance/?ref_=helpms_ih_gi_siteindex)** Coverage of the Sundance Film Festival
+- ---
+- **[Top Rated Movies](https://www.imdb.com/chart/top?ref_=helpms_ih_gi_siteindex)** The Top Rated 250 movies as determined by user votes
+- **[Top Rated TV](https://www.imdb.com/chart/toptv?ref_=helpms_ih_gi_siteindex)** The Top Rated 250 TV shows as determined by user votes
+- **[Toronto Film Festival](https://www.imdb.com/toronto/?ref_=helpms_ih_gi_siteindex)** Coverage of the Toronto Film Festival
+- **[Trailers](https://www.imdb.com/trailers?ref_=helpms_ih_gi_siteindex)** Watch trailers for upcoming and recent releases
+- **[Tribeca Film Festival](https://www.imdb.com/tribeca/?ref_=helpms_ih_gi_siteindex)** Coverage of the Tribeca Film Festival
+- **[X (formerly Twitter)](https://twitter.com/imdb?ref_=helpms_ih_gi_siteindex)** Our main @IMDb X (formerly Twitter) account, covering the latest and biggest movie and TV news, trailers, photos and more.
+- ---
+- **[Watchlist](https://www.imdb.com/list/watchlist?ref_=helpms_ih_gi_siteindex)** Keep track of all of the movies and TV shows you want to watch
+- **[What's on TV and Streaming](https://www.imdb.com/whats-on-tv?ref_=helpms_ih_gi_siteindex)** Find out what's on television and what is new on streaming services such as Prime Video, Netflix, Hulu, and more.
+- **[What to Watch](https://www.imdb.com/what-to-watch/?ref_=helpms_ih_gi_siteindex)** Personalized movie and TV recommendations, alongside relevant IMDb original content that helps customers decide what to watch.
+- ---
+- **[Your Account](https://secure.imdb.com/register-imdb/personalize?ref_=helpms_ih_gi_siteindex)** Update your account details and site preferences
+- ---
+- **[X-Ray](https://www.amazon.com/salp/xray?ref_=helpms_ih_gi_siteindex)** Learn about X-Ray for Movies & TV, powered by IMDb
